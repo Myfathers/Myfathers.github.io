@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .content {
+        width: 100%;
+        height: 500px;
+        position: relative;
+    }
+    
+    .content .content-top {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .content .content-top img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+    
+    .content ul {
+        position: absolute;
+        left: 35%;
+        bottom: 5px;
+        text-align: center;
+    }
+    
+    .content ul li {
+        display: inline-block;
+        width: 100px;
+        height: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        margin: 10px;
+    }
+    
+    .content ul li:nth-of-type(1) {
+        background: rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+<body>
+    <div class="content">
+        <div class="content-top">
+            <img src="img/tengx1.png" alt="">
+            <img src="img/tengx2.jpg" alt="">
+            <img src="img/tengx3.png" alt="">
+
+        </div>
+        <ul class="sliderpastion">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+
+
+    </div>
+    <script>
+        var imgs = document.getElementsByTagName("img");
+        var sliderpastion = document.getElementsByClassName("sliderpastion");
+        var lis = sliderpastion[0].getElementsByTagName("li");
+        var arrows = document.getElementsByClassName("arrows")[0];
+        var img = document.getElementsByClassName("img")[0];
+        var center = document.getElementsByClassName("center")[0];
+        var form = document.getElementsByTagName("form")[0];
+        var content = document.getElementsByClassName("content")[0]
+
+
+
+
+        for (var a = 0; a < lis.length; a++) {
+            lis[a].index = a;
+        }
+        for (var j = 0; j < lis.length; j++) {
+            lis[j].onclick = function() {
+
+                for (var i = 0; i < imgs.length; i++) {
+                    imgs[i].style.opacity = '0';
+                }
+                imgs[this.index].style.opacity = "1";
+                for (var w = 0; w < lis.length; w++) {
+                    lis[w].style.background = "rgba(0, 0, 0, 0.2)";
+                }
+                this.style.background = "rgba(0, 0, 0, 0.8)";
+            }
+        }
+
+
+
+        var sum = 0;
+
+
+        var move = function() {
+            sum++;
+            if (sum > imgs.length - 1) {
+                sum = 0;
+            }
+
+
+            for (var i = 0; i < imgs.length; i++) {
+                imgs[i].style.opacity = '0';
+            }
+            imgs[sum].style.opacity = "1";
+
+            for (var w = 0; w < lis.length; w++) {
+                lis[w].style.background = "rgba(0, 0, 0, 0.2)";
+            }
+
+            lis[sum].style.background = "rgba(0, 0, 0, 0.8)";
+
+
+        }
+
+
+
+        setInterval(function() {
+            move()
+
+
+
+
+
+        }, 3000)
+    </script>
+</body>
+
+</html>

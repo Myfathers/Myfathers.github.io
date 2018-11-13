@@ -1,0 +1,16 @@
+<div class="row notification">
+<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <% if (error) { %>
+        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <%= error %> 
+        </div>
+    <% } %>
+    <% if (success) { %>
+        <div class="alert alert-success alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <%= success %> 
+        </div>
+    <% } %>
+</div>
+</div>

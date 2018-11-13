@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>标题</title>
+		
+	</head>
+	<style type="text/css">
+		span{
+			background: red;
+		display: inline-block;
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		position: relative;
+		}
+		span:before{
+			content: " ";
+			background: url(img/input-unchecked.png);
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+		      
+		}
+		span:hover:before{
+			animation: move 1s ease-in-out infinite;
+		
+		}
+		@keyframes move{
+			0%{
+				transform: translateY(5px);
+			}
+			25%{
+				transform: translateY(-5px);
+			}
+			50%{
+				transform: translateY(0px);
+			}
+			75%{
+				transform: translateY(5px);
+			}
+			100%{
+				transform: translateY(-5px);
+			}
+		}
+	</style>
+	<body>
+		<span>Icon Buzz Out </span>
+<script src="https://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

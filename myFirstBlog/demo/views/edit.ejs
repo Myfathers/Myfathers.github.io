@@ -1,0 +1,46 @@
+<%- include('./components/header') %> 
+
+    <!-- 页面主体 -->
+
+    <div class="container post">
+        <!-- 每篇文章一行 -->
+        <div class="row">
+            <!-- 左边头像区域 -->
+            <div class="col-sm-2 hidden-xs profile">
+                <a href="" class="pull-right" data-toggle="popover" title="<%= user.username %>" data-content="<%= user.profile %>"
+                    data-placement="bottom">
+                    <img src="/uploads/<%= user.avatar %>" class="img-responsive img-circle">
+                </a>
+            </div>
+            <!-- 右边文章区域 -->
+            <div class="col-xs-12 col-sm-8">
+                <div class="panel panel-default">
+
+                    <div class="panel-body text-justify">
+                        <!-- Basic panel example -->
+                        <form action="/posts/<%= update._id %>/edit" method="POST">
+                            <div class="form-group">
+                                <label for="title">标题</label>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="title" value=" <%= update.title %>">
+                            </div>
+                            <div class="form-group">
+                                <label for="content">内容</label>
+                                <textarea type="text" rows="10" class="form-control" id="content" name="content"
+                                    placeholder="content"><%= update.content %></textarea>
+                            </div>
+                           
+                            <button type="submit" class="btn btn-info form-control">发布</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+<%- include('./components/footer') %> 
+
+
+  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fjzd.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content">
+        <div id="start">
+            <button onclick="start()">开始游戏</button>
+        </div>
+        <div id="main">
+            <div id="score">0</div>
+            <div id="suspend">
+                <button id="continue">继续游戏</button>
+                <button id="restart" onclick="restart()">重新开始</button>
+            </div>
+        </div>
+        <div id="settlement">
+            <p id="final-text">飞机大战分数</p>
+            <p id="final-score">1000</p>
+            <button onclick="restart()">重新开始</button>
+        </div>
+        <script src="js/fjdz.js"></script>
+</body>
+
+</html>

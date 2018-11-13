@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        list-style: none;
+        width: 200px;
+        text-align: center;
+        border: 1px solid grey;
+        margin: 20px;
+        padding: 0;
+    }
+    
+    ul li {
+        background: red;
+        margin: 5px;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <ul class="uls">
+        <li class="lis">我是谁</li>
+        <li class="lis">我在哪里</li>
+        <li class="lis">我在干吗</li>
+        <li class="lis">啊？</li>
+    </ul>
+
+</body>
+<script>
+    var lis = document.querySelectorAll(".uls .lis");
+    var _this;
+    for (var a = 0; a < lis.length; a++) {
+        lis[a].draggable = 'true';
+
+        lis[a].ondragstart = function(ev) {
+            _this = this;
+            _this.style.background = "blue";
+
+        }
+        lis[a].ondragover = function(ev) {
+            ev.preventDefault();
+            console.log("sss")
+        }
+        lis[a].ondrop = function(ev) {
+            this.parentNode.insertBefore(_this, this);
+            // _this.style.background = "yellow";
+            // this.nextSibling.insertAfter(_this, this);
+
+        }
+        lis[a].onmouseout = function() {
+            _this = this;
+            _this.style.background = "red";
+
+        }
+
+    }
+</script>
+
+</html>

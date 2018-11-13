@@ -1,0 +1,18 @@
+<%- include('./components/header') %> 
+
+    <!-- 页面主体 -->
+
+    <div class="container">   
+    <% if(constent.length) { %>
+       
+    <% constent.forEach(element => { %>
+    <%- include('./components/post-content', {contents: element}) %> 
+    <% }) %>
+    <% } else { %>
+     
+    <span>空空如野，需要发表一篇文章了</span>
+    <% } %>
+ 
+    </div>
+    
+<%- include('./components/footer') %> 

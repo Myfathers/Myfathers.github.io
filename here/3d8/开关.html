@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style type="text/css">
+    .switchs {
+        top: 20px;
+        width: 120px;
+        height: 40px;
+        display: inline-block;
+        position: relative;
+    }
+    
+    .switchs>.sliders {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #ccc;
+        transition: all .3s;
+        text-align: center;
+        line-height: 40px;
+        font-size: 15px;
+        border-radius: 200px;
+    }
+    
+    .switchs>.sliders:before {
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        content: ' ';
+        background: url(img/input-unchecked.png);
+    }
+    
+    .switchs>input {
+        display: none;
+    }
+    
+    .switchs>input:checked+.sliders {
+        color: #ccc;
+    }
+    
+    .switchs>input:checked+.sliders:before {
+        background: url(img/input-checked.png);
+    }
+    
+    .switch {
+        width: 100px;
+        height: 40px;
+        display: inline-block;
+        position: relative;
+        cursor: wait;
+    }
+    
+    .switch input {
+        display: none;
+    }
+    
+    .switch>.slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: red;
+        transition: all;
+        .3s;
+        -webkit-transition: all .3s;
+    }
+    
+    .switch>.slider:before {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: white;
+        display: inline-block;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        content: ' ';
+        transition: all;
+        .3s;
+        -webkit-transition: all .3s;
+        box-shadow: 0 0 4px rgba(255, 255, 255, .8);
+    }
+    
+    .switch>input:checked+.slider {
+        background: #2196F3;
+    }
+    
+    .switch>input:checked+.slider:before {
+        position: relative;
+        left: 60px;
+    }
+    
+    .switch>.red {
+        border-radius: 200px;
+    }
+    
+    .switch>.red:before {
+        border-radius: 200px;
+    }
+</style>
+
+<body>
+    <div>
+        <label class="switch">
+			<input type="checkbox"/>
+			<div class="slider"></div>
+		</label>
+        <label class="switch">
+			<input type="checkbox"/>
+			<div class="slider red"></div>
+		</label>
+
+
+    </div>
+    <hr />
+    <div>
+        <label class="switchs">
+	       	<input type="radio"name="engineer">
+	       	<div class="sliders">我是工程师</div>
+	       		
+	       </label>
+        <label class="switchs">
+	       	<input type="radio" name="engineer">
+	       	<div class="sliders">我是教师</div>
+	       		
+	       </label>
+    </div>
+
+    <div>
+        <label class="switchs">
+	       	<input type="checkbox">
+	       	<div class="sliders">我是工程师</div>
+	       		
+	       </label>
+        <label class="switchs">
+	       	<input type="checkbox">
+	       	<div class="sliders">我是教师</div>
+	       </label>
+        <label class="switchs">
+	       	<input type="checkbox">
+	       	<div class="sliders">我是主席</div>
+	       </label>
+    </div>
+</body>
+
+</html>

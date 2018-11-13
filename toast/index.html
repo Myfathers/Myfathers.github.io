@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+    .a {
+        cursor: pointer
+    }
+</style>
+
+<body>
+    <div class="content"></div>
+    <script>
+        var message01 = {
+            thumb: 'http://pic1.win4000.com/wallpaper/6/59cb10e50dfd1.jpg',
+            title: '新消息01',
+            content: '新消息内容01'
+        }
+        var message02 = {
+            thumb: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3240227619,4271094976&fm=27&gp=0.jpg',
+            title: '新消息02',
+            content: '新消息内容02'
+        }
+        var message03 = {
+            thumb: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=774882013,660132957&fm=27&gp=0.jpg',
+            title: '新消息03',
+            content: '新消息内容03'
+        }
+        var message04 = {
+            thumb: 'http://pic1.win4000.com/wallpaper/2018-03-06/5a9e40896bae5.jpg',
+            title: '新消息04',
+            content: '新消息内容04'
+        }
+        var message05 = {
+            thumb: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537846853625&di=572aea02e2deea40c154ae797da015d8&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F72f082025aafa40fafb5fbc1a664034f78f019be.jpg',
+            title: '新消息05',
+            content: '新消息内容05'
+        }
+        var Toast = function(parmas) {
+            this.msg = parmas;
+
+            this.node = $('<div class="toast"></div>');
+            this.node.css({
+                "margin": 0,
+                "padding": 0,
+                "width": 200,
+                "height": 50,
+                "background": "#" + Math.floor(Math.random() * 1677215).toString(16),
+                "position": "fixed",
+                "right": -200,
+                "bottom": $('.toast').length * 60 + 10,
+            })
+            if (this.msg.thumb) {
+                this.img = $('<img src="' + this.msg.thumb + '">');
+                this.img.css({
+                    "margin-top": 5,
+                    "width": 40,
+                    "height": 40,
+                    "float": "left",
+                    "display": "block",
+                    "border-radius": "50%",
+                })
+                this.node.append(this.img);
+            }
+            this.h5 = $('<h5>' + this.msg.title + '</h5>');
+            this.h5.css({
+                "margin": 0,
+                "line-height": 2,
+                "font-size": 12,
+                "padding": 0,
+            })
+            this.node.append(this.h5);
+            this.p = $('<p>' + this.msg.content + '</p>');
+            this.p.css({
+                "margin": 0,
+                "padding": 0,
+                "line-height": 2,
+                "font-size": 12,
+            })
+            this.node.append(this.p);
+            this.span = $('<span class="close">' + "x" + '</span>');
+            this.span.css({
+                "position": "absolute",
+                "right": 10,
+                "top": 0,
+            })
+            this.node.append(this.span);
+
+
+            $('.content').append(this.node);
+
+
+            this.node.animate({
+                right: 17,
+            })
+
+            // $(".close").click(function() {
+            //         $(this).parent(".toast").animate({
+            //             "right": -200,
+            //             // "opacity": 0,
+
+            //         }, function() {
+            //             $(this).parent(".toast").nextAll().animate({
+            //                 "bottom": "-=60",
+            //             })
+            //             $(this).parent(".toast").remove()
+            //         })
+            //     })
+            this.node.click(function() {
+
+                $(this).children(this.span).parent($(this)).animate({
+                    "opacity": 0,
+                    "right": -200,
+                }, function() {
+                    $(this).children(this.span).parent($(this)).nextAll().animate({
+                        "bottom": "-=60",
+                    })
+                    $(this).children(this.span).parent($(this)).remove()
+
+                })
+
+            })
+            this.node.hover(function() {
+                $(this).css({
+                    "transform": "scale(1.2)",
+                })
+            })
+
+
+            var _this = this;
+            setTimeout(function() {
+                _this.node.animate({
+                    "opacity": 0,
+                    "right": -200,
+
+                }, function() {
+                    _this.node.nextAll().animate({
+                        "bottom": "-=60",
+                    })
+                    _this.node.remove()
+                })
+
+            }, 10000)
+
+        }
+
+        function toast(parmas) {
+            var a = new Toast(parmas)
+        }
+    </script>
+    <button onclick="toast(message01)"></button>
+    <button onclick="toast(message02)"></button>
+    <button onclick="toast(message03)"></button>
+    <button onclick="toast(message04)"></button>
+    <button onclick="toast(message05)"></button>
+    <style>
+        button {
+            width: 50px;
+            height: 25px;
+            border-radius: 15px;
+            outline: none;
+            background: #919280;
+            border-color: #E03C21;
+        }
+    </style>
+</body>
+
+</html>

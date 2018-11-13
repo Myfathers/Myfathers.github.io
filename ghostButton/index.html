@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<style>
+    .topbox {
+        width: 200px;
+        height: 100px;
+        /* background: red; */
+        /* position: relative; */
+        margin: 200px auto;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+    
+    .topbox .bigbox {
+        width: 200px;
+        height: 100px;
+        background: orange;
+        margin: auto;
+        border-radius: 25px;
+        position: relative;
+    }
+    
+    .bigbox .box {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+         /*opacity: 0; */
+        background: green;
+        transform: scale(0);
+        transition: transform .5s;
+    }
+    
+    .bigbox .box.active {
+        transform: scale(25);
+        background: gray;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="topbox">
+        <div class="bigbox">
+            <div class="box"></div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    //原生JavaScript写法
+    // var bigbox = document.getElementsByClassName("bigbox")[0];
+    // var box = document.getElementsByClassName("box")[0];
+    // bigbox.onmousemove = function(ev) {
+
+    //     box.style.top = (ev.clientY - bigbox.offsetTop) + "px";
+    //     box.style.left = (ev.clientX - bigbox.offsetLeft) + "px";
+
+    //     box.style.transform = "scale(25)";
+    //     box.style.background = "gray";
+    //     box.style.cursor = " pointer";
+    // }
+    // bigbox.onmouseleave = function(ev) {
+    //     box.style.transform = "scale(0)";
+    //     box.style.background = "green";
+    // }
+
+
+    //jQuery写法
+    $(".bigbox").hover(function(ev) {
+        $(".bigbox .box").css({
+            top: (ev.clientY - $(".bigbox").offset().top),
+            left: (ev.clientX - $(".bigbox").offset().left),
+        })
+        $(".bigbox .box").addClass("active");
+
+
+
+    }, function() {
+        $(".bigbox .box").removeClass("active");
+
+    })
+</script>
+
+</html>

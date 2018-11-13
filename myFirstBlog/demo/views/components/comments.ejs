@@ -1,0 +1,20 @@
+<div class="media">
+    <div class="media-left comment">
+
+        <a href="/posts?author=<%= comment2.author._id %>">
+            <img class="media-object img-circle" src="/uploads/<%= comment2.author.avatar %>"alt="...">
+        </a>
+    </div>
+    <div class="media-body">
+        <div class="media-heading clearfix">
+            <div class="pull-left">
+                <small class="name"><a href="/posts?author=<%= comment2.author._id %>"><%= comment2.author.username %></a></small>
+                <small class="time"><%= comment2.createdTime.toLocaleString() %></small>
+            </div>
+            <small class="pull-right delete"><a href="/comments/<%= comment2._id %>/remove">删除</a></small>
+        </div>
+        <div class="text-justify comment-content">
+            <span><%= comment2.content %></span>
+        </div>
+    </div>
+</div>

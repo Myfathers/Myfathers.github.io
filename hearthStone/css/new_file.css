@@ -1,0 +1,2306 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/Fbg.jpg);
+    background-repeat-x: center 0 fixed;
+    color: #e7d4a9;
+    /*position: relative;*/
+}
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+.top {
+    height: 40px;
+    background: #2c0903;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*position: relative;*/
+}
+
+.top .left1 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.top .left1 .left1-li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.top .left1 .left1-li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+}
+
+.top .ringt1 {
+    list-style: none;
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top .ringt1 .left1-li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.top .ringt1 .left1-li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+}
+
+.top .left1 .left1-li:nth-of-type(1) .tubiao:after,
+.top .left1 .left1-li:nth-of-type(4) .tubiao:after,
+.top .ringt1 .left1-li:nth-of-type(2) a:after {
+    content: '';
+    width: 14px;
+    height: 7px;
+    background: url(../img/Ficon-sprite.png) no-repeat;
+    background-position: -147px -131px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.top .left1 .left1-li:nth-of-type(1) .tubiao:hover:after {
+    content: '';
+    width: 14px;
+    height: 7px;
+    background: url(../img/Ficon-sprite.png) no-repeat;
+    background-position: -147px -145px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.top .left1 .left1-li:nth-of-type(1) .tubiao {
+    text-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, .3);
+}
+
+.top .left1 .left1-li>a:hover {
+    color: white;
+    text-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, .3);
+}
+
+.top .ringt1 .left1-li>a:hover {
+    color: white;
+    text-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, .3);
+}
+
+.top .left1 .zhingjianshang {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: rgba(21, 26, 35, .95);
+    border: solid 1px rgba(255, 255, 255, .15);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 30px 0;
+    z-index: 1000;
+}
+
+.zhingjianshang .xiaotubiao {
+    width: 180px;
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.zhingjianshang .xiaotubiao:nth-of-type(1) {
+    background-image: url(../img/na.jpg);
+    /*background-size:180px 180px ;*/
+}
+
+.zhingjianshang .xiaotubiao:nth-of-type(2) {
+    background-image: url(../img/aaai.jpg);
+    /*background-size:180px 180px ;*/
+}
+
+.zhingjianshang .xiaotubiao:nth-of-type(3) {
+    background-image: url(../img/shi.jpg);
+    background-size: 180px 180px;
+}
+
+.zhingjianshang .xiaotubiao:nth-of-type(4) {
+    background-image: url(../img/shui.jpg);
+    background-size: 180px 180px;
+}
+
+.zhingjianshang .xiaotubiao:nth-of-type(5) {
+    background-image: url(../img/wo.jpg);
+    background-size: 180px 180px;
+}
+
+.zhingjianshang .xiaotubiao:nth-of-type(6) {
+    background-image: url(../img/li.jpg);
+    background-size: 180px 180px;
+}
+
+.top .left1-li .zhingjianshang {
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0;
+}
+
+.top .left1-li .zhingjianshang .xiaotubiao {
+    position: relative;
+    top: -30px;
+    transition: top .03s;
+}
+
+.left1-li:hover .zhingjianshang .xiaotubiao {
+    position: relative;
+    top: 0px;
+    transition: all .3s;
+}
+
+.left1-li .zhingjianshang .xiaotubiao:hover {
+    outline: 1px solid white;
+    filter: brightness(120%)
+}
+
+.top .left1-li:hover .tubiao+.zhingjianshang {
+    /*display: block;*/
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .8s;
+}
+
+.top .left1-li .zhingjianshang .tubiao:nth-of-type(1) {
+    transition-delay: 30ms;
+}
+
+.top .left1-li .zhingjianshang .tubiao:nth-of-type(2) {
+    transition-delay: 60ms;
+}
+
+.top .left1-li .zhingjianshang .tubiao:nth-of-type(3) {
+    transition-delay: 90ms;
+}
+
+.top .left1-li .zhingjianshang .tubiao:nth-of-type(4) {
+    transition-delay: 120ms;
+}
+
+.top .left1-li .zhingjianshang .tubiao:nth-of-type(5) {
+    transition-delay: 150ms;
+}
+
+.top .left1-li .zhingjianshang .tubiao:nth-of-type(6) {
+    transition-delay: 180ms;
+}
+
+.top .left1 .left1-li:nth-of-type(4) .tubiao:hover:after {
+    content: '';
+    width: 14px;
+    height: 7px;
+    background: url(../img/Ficon-sprite.png) no-repeat;
+    background-position: -147px -145px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.top .left1 .subnav {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: rgba(21, 26, 35, .95);
+    border: solid 1px rgba(255, 255, 255, .15);
+    box-sizing: border-box;
+    text-align: center;
+    /*verflow: hidden*/
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.top .left1-li:hover .tubiao+.subnav {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .8s;
+}
+
+.top .left1 .subnav>a {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -30px;
+}
+
+.left1-li:hover .subnav>a {
+    position: relative;
+    top: 0px;
+    transition: all .3s;
+}
+
+.subnav a:hover {
+    background: rgba(21, 26, 35, .95);
+}
+
+.top .left1 .subnav>a .lala {
+    float: left;
+    position: relative;
+    top: 0 margin;
+    padding: 0;
+    height: 300px;
+}
+
+.top .left1 .subnav>a .alal {
+    float: right;
+    width: 0px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.top .left1 .subnav>a .alal img {
+    width: 100px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, .7);
+}
+
+.top .left1-li .subnav>a:hover .alal {
+    width: 100px;
+    transition: all .2s;
+}
+
+.left1-li:hover .subnav>a:nth-of-type(1) {
+    transition-delay: 30ms;
+}
+
+.left1-li:hover .subnav>a:nth-of-type(2) {
+    transition-delay: 60ms;
+}
+
+.left1-li:hover .subnav>a:nth-of-type(3) {
+    transition-delay: 90ms;
+}
+
+.left1-li:hover .subnav>a:nth-of-type(4) {
+    transition-delay: 120ms;
+}
+
+.left1-li:hover .subnav>a:nth-of-type(5) {
+    transition-delay: 150ms;
+}
+
+.saishi {
+    color: white;
+    border-top: 1px solid white;
+}
+
+.saishi span {
+    position: relative;
+    top: -10px;
+    opacity: 0;
+    transition: top .3s;
+}
+
+.left1-li:hover .subnav .saishi span {
+    top: 0px;
+    opacity: 1;
+    transition: top .1s, opacity .1s .1s;
+}
+
+.tupian {
+    height: 40px;
+    width: 61.82px;
+    background-image: url(../img/Ficon-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -18px -75px;
+    float: left;
+    margin-left: 40px;
+}
+
+.top .tupian:hover {
+    height: 40px;
+    width: 61.82px;
+    background-image: url(../img/Ficon-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -18px -119px;
+    float: left;
+    margin-left: 40px;
+}
+
+.top .ringt1 .txz {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 318px;
+    height: 167px;
+    background: rgba(21, 26, 35, .95);
+    border: solid 1px rgba(255, 255, 255, .15);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 30px 0;
+    z-index: 1000;
+    left: 1188px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.top .left1-li:hover .txzza+.txz {
+    opacity: 1;
+    visibility: visible;
+}
+
+.top .ringt1 .left1-li:nth-of-type(2) .txzza:hover:after {
+    content: '';
+    width: 14px;
+    height: 7px;
+    background: url(../img/Ficon-sprite.png) no-repeat;
+    background-position: -147px -145px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.txz .txzdiv {
+    width: 318px;
+    height: 44px;
+    /*border-bottom: 1px solid gray;*/
+    position: relative;
+    top: -21px;
+}
+
+.txz input {
+    text-align: center;
+    background: #0e86ca;
+    ;
+    margin: 0;
+    padding: 0;
+    border: none;
+    padding: 10px 40px;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    top: 10px;
+}
+
+.txz input:hover {
+    background: #00aeff;
+}
+
+.txz .zxdiv {
+    line-height: 20px;
+    text-align: center;
+    width: 318px;
+    height: 44px;
+    /*border-bottom: 1px solid gray;*/
+    border-top: 1px solid rgba(58, 58, 58, .3);
+    ;
+    border-bottom: 1px solid rgba(58, 58, 58, .3);
+    ;
+}
+
+.txz .zxdiv:hover {
+    color: white;
+    background: rgba(255, 255, 255, .05);
+}
+
+.txz .zxdiv .zxdicimg {
+    top: 10px;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 5px;
+    background: url(../img/Ficon-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -141px -14px;
+    float: left;
+    position: relative;
+    left: 20px;
+}
+
+.txz .zxdiv p {
+    top: 10px;
+    float: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 400px;
+    color: white;
+}
+
+.txz .zxdiv1 {
+    width: 318px;
+    height: 44px;
+    position: relative;
+}
+
+.txz .zxdiv1:hover {
+    color: white;
+    background: rgba(255, 255, 255, .05);
+}
+
+.txz .zxdiv1 .zxdicimg1 {
+    top: 10px;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 5px;
+    background: url(../img/Ficon-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -198px -16px;
+    float: left;
+    position: relative;
+    left: 20px;
+}
+
+.txz .zxdiv1 p {
+    top: 10px;
+    float: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 400px;
+    color: white;
+}
+
+.wraper {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 3314px;
+    position: relative;
+    background: red;
+    background: url(../img/bg.jpg)no-repeat 50% 0 fixed;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.toubu {
+    width: 1200px;
+    height: 889.2px;
+    margin: 0 auto;
+    /*background: red;*/
+    padding: 0;
+    position: relative;
+}
+
+.toubutupian {
+    width: 1024px;
+    height: 275px;
+    /*background: orangered;*/
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index: 900;
+}
+
+.logo {
+    position: absolute;
+    width: 350px;
+    height: 184px;
+    top: 32px;
+    left: 10px;
+    z-index: 900px;
+    background: url(../img/Fhome-v2016.png) no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.sousuo {
+    width: 302px;
+    height: 42px;
+    position: absolute;
+    right: 21px;
+    top: 147px;
+    z-index: 1001;
+    border: none;
+    outline: none;
+    /*background: rosybrown;*/
+}
+
+.sousuo input[type="text"] {
+    background: rgba(58, 58, 58, .3);
+    border: 1px solid #8bb6ad;
+    line-height: 26px;
+    font-size: 14px;
+    height: 26px;
+    padding: 7px 40px 7px 10px;
+    width: 250px;
+    color: white;
+    outline: none;
+}
+
+.sousuo a {
+    background-image: url(../img/Fsearch.png);
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    /*background: red;*/
+    outline: none;
+}
+
+.dhl {
+    width: 1024px;
+    height: 52px;
+    z-index: 2000;
+    top: 263px;
+    position: relative;
+}
+
+.fix {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    width: 963px;
+    height: 52px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: block;
+    padding-left: 58px;
+    text-align: center;
+    top: 0;
+}
+
+.fix .fix1 {
+    float: left;
+    width: 114px;
+    height: 52px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#fixs a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+}
+
+.fix1-1 {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    background-position: -58px -104px;
+}
+
+.fix2-1:hover {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    background-position: -173px -104px;
+}
+
+.fix3-1:hover {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    background-position: -287px -104px;
+}
+
+.fix4-1:hover {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    background-position: -400px -104px;
+}
+
+.fix5-1:hover {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    background-position: -514px -104px;
+}
+
+.fix6-1:hover {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    background-position: -627px -104px;
+}
+
+.fix7-1:hover {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    background-position: -742px -104px;
+}
+
+.fix8-1:hover {
+    background: url(../img/Fnav_bg-1.jpg) no-repeat 0 0;
+    background-position: -856px -104px;
+}
+
+.fix-left {
+    background: url(../img/sprite1-l.png)no-repeat 96px 74px;
+}
+
+#fixs1 .fix2-1-1 {
+    margin: 0;
+    padding: 0;
+    width: 114px;
+    height: 104px;
+    /*background: red;*/
+}
+
+.left {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -18px;
+    left: -91px;
+    width: 96px;
+    height: 74px;
+    background: url(../img/sprite1-l.png) no-repeat;
+}
+
+.right {
+    border: none;
+    background: url(../img/sprite2-r.png) no-repeat;
+    width: 95px;
+    height: 69px;
+    position: relative;
+    top: -92px;
+    left: 896px;
+    margin: 0;
+    padding: 0;
+}
+
+.ul1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+    display: none;
+}
+
+.fix .fix1:hover .ul1 {
+    position: relative;
+    display: block;
+    z-index: 1000;
+}
+
+.fix #fixs1 .ul1 li {
+    width: 114px;
+    height: 39px;
+    line-height: 32px;
+}
+
+.fix #fixs1 .ul1 a:hover {
+    background: rgba(120, 9, 8, 85);
+    color: white;
+}
+
+.fix #fixs1 .ul1 a {
+    color: #cd998e;
+    font-size: 14px;
+    padding-right: 40px;
+    position: relative;
+    top: -5px;
+    background: rgba(77, 9, 8, .95);
+}
+
+.fix #fixs2 .ul1 li {
+    width: 114px;
+    height: 39px;
+    line-height: 32px;
+}
+
+.fix #fixs2 .ul1 a:hover {
+    background: rgba(120, 9, 8, 85);
+    color: white;
+}
+
+.fix #fixs2 .ul1 a {
+    color: #cd998e;
+    font-size: 14px;
+    padding-right: 40px;
+    position: relative;
+    top: -5px;
+    background: rgba(77, 9, 8, .95);
+}
+
+.fix #fixs3 .ul1 li {
+    width: 114px;
+    height: 39px;
+    line-height: 32px;
+}
+
+.fix #fixs3 .ul1 a:hover {
+    background: rgba(120, 9, 8, 85);
+    color: white;
+}
+
+.fix #fixs3 .ul1 a {
+    color: #cd998e;
+    ;
+    font-size: 14px;
+    padding-right: 40px;
+    position: relative;
+    top: -5px;
+    background: rgba(77, 9, 8, .95);
+}
+
+.fix #fixs6 .ul1 li {
+    width: 114px;
+    height: 39px;
+    line-height: 32px;
+}
+
+.fix #fixs6 .ul1 a:hover {
+    background: rgba(120, 9, 8, 85);
+    color: white;
+}
+
+.fix #fixs6 .ul1 a {
+    color: #cd998e;
+    ;
+    font-size: 14px;
+    padding-right: 40px;
+    position: relative;
+    top: -5px;
+    background: rgba(77, 9, 8, .95);
+}
+
+.toubuzhongjian {
+    width: 1024px;
+    min-height: 1000px;
+    /*background: green;*/
+    margin: 0 auto;
+    position: relative;
+    z-index: 2px;
+    padding-bottom: 100px;
+}
+
+.hom .toubutupian-homecom {
+    background-image: none;
+}
+
+.toubutupian-homecom {
+    width: 100%;
+    padding-bottom: 41px;
+    position: relative;
+    background: url(../img/Fcon-bg-top.png)no-repeat 50% 0;
+}
+
+.toubutupian-hom {
+    display: block;
+}
+
+.toubutupian-comman {
+    width: 703px;
+    position: relative;
+    margin-bottom: 20px;
+    background: url(../img/Fhomeconmain-bg.png) repeat-y 50% 0;
+}
+
+.toubutupian-comman-top {
+    /*min-height: 2283px;*/
+    position: relative;
+    padding: 27px 0 20px 0;
+    background: url(../img/Fhomeconmain-bg.png) no-repeat 50% 0;
+}
+
+.yanjing {
+    width: 640px;
+    height: 296px;
+    margin: 0 auto;
+    background: #000;
+    padding: 1px;
+    box-shadow: 1px 1px 1px #ffe4bb inset, -1px -1px 1px #ffe4bb inset;
+    border: 1px solid #b7894c;
+    position: relative;
+}
+
+.yanjing-wraper {
+    width: 640px;
+    height: 296px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../img/Fa095618978992610127defb1cfb6632e.jpg);
+    box-sizing: border-box;
+}
+
+.yyy {
+    border-top: 1px solid rgba(58, 58, 58, .3);
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    line-height: 35px;
+    background: rgba(58, 58, 58, .3);
+}
+
+.yyy span {
+    color: white;
+    display: inline-block;
+    margin-left: 5px;
+    float: left;
+    font-size: 14px;
+}
+
+.yyy img {
+    margin: 2px 0;
+    border: 1px solid yellow;
+    margin-right: 5px;
+    width: 64px;
+    float: right;
+}
+
+.contentyanjing {
+    width: 663px;
+    height: 218px;
+    padding: 35px 0 0 0;
+    margin: 0 auto;
+    /*background: red;*/
+    background: url(../img/Fnews-eyes-bg.jpg) no-repeat 50% 100%;
+}
+
+.chan {
+    display: block;
+}
+
+.contentyanjing .yanjing-li {
+    margin: 0 8px;
+}
+
+.contentyanjing li {
+    float: left;
+    width: 288px;
+    height: 191px;
+    padding: 10px;
+    background: url(../img/Fnews-eyes-module.png) no-repeat;
+}
+
+.yanjing-li img {
+    padding: 0;
+    margin: 0 auto;
+    width: 280px;
+    height: 140px;
+}
+
+.yanjing-li img:hover {
+    outline: 2px solid green;
+}
+
+.yanjing-li p {
+    color: #2e1b1e;
+    width: 288px;
+    height: 44px;
+    font-size: 16px;
+    margin: 0 auto;
+    line-height: 44px;
+    margin-top: 8px;
+    overflow: hidden;
+    font-weight: 700;
+    text-align: center;
+}
+
+.yanjing-news {
+    margin: 0 auto;
+    width: 630px;
+}
+
+.yanjing-news-wrap {
+    padding-top: 45px;
+    border-top: 0px;
+    position: relative;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dbc497;
+}
+
+.yanjing-news-wrap:hover {
+    background: url(../img/sbg.png);
+}
+
+.new-wrap {
+    padding-left: 222px;
+    display: block;
+    position: relative;
+    width: 398px;
+    height: 100px;
+    text-decoration: none;
+}
+
+.new-wrap img {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    padding: 1px;
+    background: #fee0b9;
+    border: 1px solid #b7894c
+}
+
+.new-wrap img:hover {
+    outline: 2px solid green;
+}
+
+.new-wrap h4 {
+    color: #150603;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.new-wrap .new-wrap-p {
+    font-size: 14px;
+    color: #695745;
+    height: 38px;
+    /*overflow: hidden;*/
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.new-wrap-p1 {
+    position: absolute;
+    bottom: 22px;
+    left: 223px;
+    /*top: 5px;*/
+    margin: 0;
+    padding: 0;
+}
+
+.new-wrap-p1>span:nth-of-type(1):hover {
+    filter: brightness(120%)
+}
+
+.new-wrap-p1 .wrap-o1 {
+    width: 23px;
+    height: 23px;
+    background-position: -310px -277px;
+    margin-right: 2px;
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.shijian {
+    color: #666;
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.new-wrap-p1 .wrap-o2 {
+    width: 23px;
+    height: 23px;
+    background-position: -80px -110px;
+    margin-right: 2px;
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.yanjing-news-more {
+    width: 640px;
+    margin: 0 auto;
+    border-top: 1px solid #efdba8;
+}
+
+.more {
+    text-align: center;
+    height: 40px;
+    font-size: 16px;
+    color: #5b4b38;
+    line-height: 40px;
+    border: 1px solid #f1dbb8;
+    border-radius: 3px;
+    margin: 15px auto 0;
+    background: #d3b78b;
+}
+
+.more-new {
+    text-decoration: none;
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    display: block;
+    color: #5b4b38!important;
+}
+
+.more img {
+    background: url(../img/more-icon.png);
+    background-repeat: no-repeat;
+    background-position: 365px 50%;
+    border-bottom: none;
+    padding-right: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.more-new:hover {
+    background: #c3a473;
+}
+
+.hime {
+    width: 703px;
+    height: 34px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    background: url(../img/youbian.png);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+}
+
+.toubutupian-comman-right {
+    width: 340px;
+    height: 2550px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../img/zoubia.png) repeat-y 100% 0;
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top {
+    width: 328px;
+    height: 589px;
+    position: relative;
+    background: url(../img/cr.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    /*z-index: 1000;*/
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .log-top {
+    width: 353px;
+    height: 192px;
+    position: absolute;
+    top: 1px;
+    left: -6px;
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    z-index: 1;
+    background: url(../img/logos.png) no-repeat 50% 0;
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai {
+    width: 297px;
+    height: 228px;
+    position: absolute;
+    top: 134px;
+    padding-bottom: 80px;
+    left: 18px;
+    z-index: 1;
+    /*background: red;*/
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai .xiazaiui {
+    padding: 20px 0 0 36px;
+    height: 85px;
+    list-style: none;
+    /*background: green;*/
+    display: block;
+    margin-top: 85px;
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai .xiazaiui li {
+    float: left;
+    position: relative;
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai .xiazaiui li a {
+    width: 80px;
+    height: 90px;
+    display: block;
+    background: url(../img/Fdevice-icon.png) no-repeat;
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai .xiazaiui li .pc {
+    background-position: 0 -181px;
+    text-shadow: 0 0 15px white, 0 0 30px rgba(255, 255, 255, .3);
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai .xiazaiui li .ios {
+    background-position: -80px 0px;
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai .xiazaiui li .andorid {
+    background-position: -160px 0;
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai .xiazaiui li .ios:hover {
+    background-position: -80px -89px;
+}
+
+.toubutupian-comman-right .toubutupian-comman-right-top .xiazai .xiazaiui li .andorid:hover {
+    background-position: -160px -89px;
+}
+
+#videos {
+    display: block;
+    position: absolute;
+    top: 206px;
+    left: 43px;
+    z-index: 1;
+}
+
+.hehe-content {
+    width: 305px;
+    margin: 0 auto;
+    /*position: relative;*/
+    z-index: 999;
+}
+
+.momoye {
+    background: url(../img/btu.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    width: 305px;
+}
+
+.nuto {
+    width: 265px;
+    top: 20px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.h3s {
+    position: relative;
+}
+
+.h3s>a {
+    display: inline-block;
+}
+
+.h3s img:nth-of-type(2) {
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: all .3s;
+}
+
+.h3s:hover img:nth-of-type(1) {
+    filter: brightness(60%)
+}
+
+.h3s:hover img:nth-of-type(2) {
+    transform: scale(1.1);
+}
+
+.nuto>h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+}
+
+.nuto>h3 .span1 {
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    background-position: -87px -4px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nuto>span {
+    color: #251c0f;
+    display: inline-block;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.momoyes {
+    background: url(../img/btu.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    width: 305px;
+    height: 227px;
+}
+
+.nito {
+    width: 265px;
+    top: 20px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.nito>h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+}
+
+.nito>h3 .span1 {
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    background-position: -87px -4px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.momoyess {
+    background: url(../img/btu.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    width: 305px;
+    height: 227px;
+}
+
+.nns {
+    width: 265px;
+    top: 20px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.nns .more {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 33px;
+    height: 20px;
+    background: url(../img/yanjing.png);
+    background-repeat: no-repeat;
+    /*background: red;*/
+    float: right;
+}
+
+.nns>h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+}
+
+.nns>h3 .span1 {
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    background-position: -46px -74px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.momoyess .nns .momoul {
+    list-style: none;
+    display: block;
+    min-height: 100px;
+    padding-bottom: 10px;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.momoyess .nns .momoul>li {
+    margin-bottom: 3px;
+    border-bottom: 1px solid #e8d6a8;
+    padding-left: 5px;
+    font-size: 12px;
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    background-position: -135px -139px;
+}
+
+.momoyess .nns .momoul>li>a {
+    color: #5b4b38;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.momoyess .nns .momoul>li>a:hover {
+    color: orange;
+}
+
+.momoyeing {
+    background: url(../img/btu.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    width: 305px;
+    height: 227px;
+}
+
+.nnss {
+    width: 265px;
+    top: 20px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.nnss .more {
+    position: relative;
+    top: -75px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 33px;
+    height: 20px;
+    background: url(../img/yanjing.png);
+    background-repeat: no-repeat;
+    /*background: red;*/
+    float: right;
+}
+
+.nnss>h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+}
+
+.nnss>h3 .span1 {
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    background-position: -87px -39px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.momoyeing .nnss .momoyue {
+    list-style: none;
+    display: block;
+    min-height: 200px;
+    padding-bottom: 10px;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.momoyeing .nnss .momoyue>li {
+    margin-bottom: 6px;
+    border-bottom: 1px solid #e8d6a8;
+    padding-left: 5px;
+    font-size: 12px;
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    background-position: -135px -139px;
+}
+
+.momoyeing .nnss .momoyue>li>a {
+    color: #5b4b38;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.momoyeing .nnss .momoyue>li>a:hover {
+    color: orange;
+}
+
+.risss {
+    width: 260px;
+    min-height: 80px;
+    margin: 0 auto 20px;
+}
+
+div.subModule {
+    width: 100%;
+    min-height: 52px;
+    margin: 10px auto;
+    background: #d1b181;
+    border: 1px solid antiquewhite;
+    border-radius: 3px;
+}
+
+.subModule .text {
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+
+.subModule .text h4 {
+    color: #251c0f;
+    font-size: 15px;
+    /*font-weight: 700;*/
+    margin: 0;
+    padding: 0;
+}
+
+.subModule .text p {
+    color: #66563d;
+    font-size: 14px;
+    /*font-weight: 700;*/
+    margin: 0;
+    padding: 0;
+}
+
+.s1 {
+    height: 70px;
+}
+
+.s2 {
+    height: 70px;
+}
+
+.s3 {
+    height: 70px;
+}
+
+.s4 {
+    height: 70px;
+}
+
+.s5 {
+    height: 70px;
+}
+
+.s6 {
+    height: 70px;
+}
+
+.s6 .code {
+    display: none;
+}
+
+.s6:hover .code {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -170px;
+    border: 5px solid rgba(255, 255, 255, 25);
+    border-radius: 5px;
+}
+
+.s7 {
+    height: 70px;
+}
+
+.s7 {
+    height: 70px;
+}
+
+.s8 {
+    height: 70px;
+}
+
+.subModule a {
+    width: 260px;
+    height: 60px;
+    left: 0;
+    position: relative;
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    z-index: 10;
+    background: url(../img/sailei.png) no-repeat;
+}
+
+.subModule .icon1 {
+    height: 66px;
+    top: -26px;
+    background-position: 175px -279px;
+}
+
+.subModule .icon1:hover {
+    background-position: 175px -377px;
+}
+
+.subModule .icon2 {
+    height: 83px;
+    top: -43px;
+    background-position: 175px -775px;
+}
+
+.subModule .icon2:hover {
+    background-position: 175px -896px;
+}
+
+.subModule .icon3 {
+    height: 68px;
+    top: -35px;
+    background-position: 175px -1030px;
+}
+
+.subModule .icon3:hover {
+    background-position: 178px -1033px;
+}
+
+.subModule .icon4 {
+    height: 73px;
+    top: -36px;
+    background-position: 175px -1120px;
+}
+
+.subModule .icon4:hover {
+    background-position: 175px -1234px;
+}
+
+.subModule .icon5 {
+    height: 89px;
+    top: -40px;
+    background-position: 175px -1629px;
+}
+
+.subModule .icon5:hover {
+    background-position: 175px -1721px;
+}
+
+.subModule .icon6 {
+    height: 89px;
+    top: -30px;
+    background-position: 175px -2040px;
+}
+
+.subModule .icon6:hover {
+    background-position: 175px -2045px;
+}
+
+.subModule .icon7 {
+    height: 83px;
+    top: -50px;
+    background-position: 175px -513px;
+}
+
+.subModule .icon7:hover {
+    background-position: 175px -615px;
+}
+
+.subModule .icon8 {
+    height: 80px;
+    top: -40px;
+    background-position: 175px -1355px;
+}
+
+.subModule .icon8:hover {
+    background-position: 175px -1444px;
+}
+
+.right-top-tops {
+    width: 305px;
+    margin: 0 auto;
+}
+
+.right-top-tops .boo-top {
+    background: url(../img/btu.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    width: 305px;
+    height: 227px;
+}
+
+.boo-top>h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 20px;
+}
+
+.boo-top>h3 .span1 {
+    background-image: url(../img/F11111icon.png);
+    background-repeat: no-repeat;
+    background-position: -4px -189px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.boo-top-ul {
+    margin: 20px auto auto auto;
+    padding-left: 10px;
+    display: inline-block;
+    list-style: none;
+}
+
+.boo-top-ul li {
+    float: left;
+    font-size: 14px;
+    width: 118px;
+    margin-bottom: 23px;
+    color: black;
+}
+
+.boo-top-ul .weixin {
+    padding-right: 8px;
+    margin-right: 10px;
+    line-height: 18px;
+    /*position: relative;*/
+    display: inline;
+    background: url(../img/weixin.png);
+    background-repeat: no-repeat;
+    background-position: right 4px;
+}
+
+.weixintu {
+    width: 32px;
+    height: 42px;
+    float: left;
+    background: url(../img/Fshare.png)-378px 0;
+}
+
+.boo-top-ul .weixin>a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.weibotu {
+    width: 32px;
+    height: 42px;
+    float: left;
+    background: url(../img/Fshare.png)-210px 2px;
+}
+
+.weibotu:hover {
+    background-position: -210px -60px;
+    transition: all .3s;
+}
+
+.boo-top-ul .weibo>a {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.boo-top-ul .weibo>a:hover {
+    color: orange;
+}
+
+.mostu {
+    width: 32px;
+    height: 42px;
+    float: left;
+    background: url(../img/Fshare.png)-463px 0;
+}
+
+.mostu:hover {
+    background-position: -463px -60px;
+    transition: all .3s;
+}
+
+.boo-top-ul .mos>a {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.boo-top-ul .mos>a:hover {
+    color: orange;
+}
+
+.boo-tpp {
+    margin: 20px auto auto auto;
+    padding-left: 10px;
+    display: inline-block;
+    list-style: none;
+    color: black;
+}
+
+.boo-tpp li {
+    float: left;
+    font-size: 14px;
+    width: 118px;
+    margin-bottom: 23px;
+    color: black;
+}
+
+.boo-tpp .youxiang {
+    padding-right: 8px;
+    margin-right: 10px;
+    line-height: 18px;
+    /*position: relative;*/
+    display: inline;
+    background: url(../img/weixin.png);
+    background-repeat: no-repeat;
+    background-position: right 4px;
+}
+
+.boo-tpp .youxiang>h3 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.boo-tpp .youxiang>a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.boo-tpp .youxiang>a:hover {
+    color: orange;
+}
+
+.boo-tpp .kefu>h3 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.kefu>b {
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    top: -5px;
+}
+
+.dibu {
+    background: url(../img/dibu.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    width: 340px;
+    height: 35px;
+    position: relative;
+    top: 92px;
+}
+
+.dingyue {
+    position: relative;
+}
+
+.dinglue {
+    position: relative;
+}
+
+.moshou {
+    position: relative;
+}
+
+.dingyue img {
+    display: none;
+    width: 92px;
+    height: 92px;
+    border: 5px solid rgba(255, 255, 255, 25);
+    border-radius: 5px;
+}
+
+.dinglue img {
+    display: none;
+    width: 92px;
+    height: 92px;
+    border: 5px solid rgba(255, 255, 255, 25);
+    border-radius: 5px;
+}
+
+.moshou img {
+    display: none;
+    width: 92px;
+    height: 92px;
+    border: 5px solid rgba(255, 255, 255, 25);
+    border-radius: 5px;
+}
+
+.weixin .dingyue>em:nth-of-type(1):hover {
+    color: green;
+}
+
+.weixin .dinglue>em:nth-of-type(1):hover {
+    color: orange;
+}
+
+.weixin .dingyue>em:nth-of-type(2) {
+    color: green;
+}
+
+.weixin .dinglue>em:nth-of-type(2) {
+    color: orange;
+}
+
+.weixin .dingyue:hover img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    /*border: 5px solid rgba(255,255,255,25);
+    border-radius: 5px;*/
+}
+
+.weixin .dinglue:hover img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    /*border: 5px solid rgba(255,255,255,25);
+    border-radius: 5px;*/
+}
+
+.mos .moshou:hover img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100px;
+}
+
+.footer {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    line-height: 26px;
+    width: auto;
+    z-index: 3px;
+    font-size: 12px !important;
+    background: url(../img/Ffooterrepeat.jpg ) repeat-x;
+}
+
+.footers {
+    margin: 0 auto;
+    padding: 0;
+    background: url(../img/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    height: 471px;
+}
+
+.rogfooter {
+    padding: 0;
+    margin: 0 auto;
+    width: 349px;
+    height: 87px;
+    position: relative;
+    z-index: 101;
+    left: 9px;
+    top: -30px;
+    background: url(../img/toou.png);
+    background-repeat: no-repeat;
+}
+
+.abotna {
+    margin: 0;
+    padding: 0;
+    top: 10px;
+    position: relative;
+    left: 50px;
+    width: 249px;
+    height: 78px;
+    display: block;
+    background: url(../img/btn.png);
+    background-repeat: no-repeat;
+}
+
+.wenzis {
+    margin: 0;
+    padding: 0;
+    height: 31px;
+    width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    /*background: royalblue;*/
+    z-index: 1000;
+    font-size: 14px
+}
+
+.footerleft {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 338px;
+    height: 27.2px;
+}
+
+.footerleft>a {
+    margin-right: 37px;
+    vertical-align: middle;
+    text-decoration: none;
+    padding-top: 5px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footerleft>a .ffteft1 {
+    background-position: -6px -7px;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    background-image: url(../img/business.png);
+    background-repeat: no-repeat;
+}
+
+.footerleft>a .ffteft2 {
+    background-position: -36px -8px;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    background-image: url(../img/business.png);
+    background-repeat: no-repeat;
+}
+
+.footerleft>a .ffteft3 {
+    background-position: -8px -32px;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    background-image: url(../img/business.png);
+    background-repeat: no-repeat;
+}
+
+.footerright {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px margin: 0;
+    padding: 0;
+    float: right;
+    /*background: royalblue;*/
+    width: 338px;
+    height: 27.2px;
+}
+
+strong {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.icon-nvidia {
+    vertical-align: middle;
+    margin: 0 2px;
+    padding: 0;
+    background: url(../img/ywd.png);
+    background-repeat: no-repeat;
+    text-decoration: none;
+    display: inline-block;
+    background-position: -352px 0;
+    width: 95px;
+    height: 26px;
+}
+
+.icon-apply {
+    background: #241101;
+    border: 1px solid #2d1702;
+    color: #ac771f;
+    text-decoration: none;
+    display: block;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin: 0 0 0 13px;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+    padding-top: 0;
+}
+
+.line-h {
+    position: absolute;
+    display: block;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    background: #ac771f;
+    width: 10px;
+    height: 2px;
+    margin: -1px 0 0 -5px;
+}
+
+.line-s {
+    position: absolute;
+    display: block;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    margin: -5px 0 0 -1px;
+    background: #ac771f;
+}
+
+.xiegan {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-media {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.icon-more {
+    background: #241101;
+    border: 1px solid #2d1702;
+    color: #ac771f;
+    text-decoration: none;
+    display: block;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin: 0 0 0 13px;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+    padding-top: 0;
+}
+
+.icon-more>i {
+    border: 4px solid transparent;
+    border-top-color: #ac771f;
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2px 0 0 -4px;
+}
+
+.dd {
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    right: 0;
+    position: absolute;
+    height: 106.4px;
+    width: 756px;
+    background: #1f1009;
+    border: 1px solid #261c12;
+    opacity: 0;
+    visibility: hidden;
+    /* transition: all 5s; */
+}
+
+1 .dd>ul {
+    list-style: none;
+}
+
+.dd>ul>li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: left;
+    width: 99px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.dd>ul>li>a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #b5a89f;
+}
+
+.dd>ul>li:last-of-type {
+    color: #ea8631;
+    float: right;
+    text-decoration: underline;
+}
+
+.dd>ul>li a:hover {
+    color: white;
+}
+
+.footerright .icon-more:hover+.dd {
+    opacity: 1;
+    visibility: visible;
+    transition: all 4s;
+}
+
+.footerright .icon-more+.dd:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cprt {
+    position: relative;
+    top: 40px;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    height: 141px;
+}
+
+.cprtleft {
+    float: left;
+    height: 85px;
+    width: 280px;
+}
+
+.logo_bz {
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    vertical-align: top;
+    background: url(../img/logo_blizzard.png);
+    background-repeat: no-repeat;
+}
+
+.logo_ne {
+    position: relative;
+    top: 39px;
+    display: inline-block;
+    width: 125px;
+    height: 38px;
+    background: url(../img/logo_ne.png);
+    background-repeat: no-repeat;
+}
+
+.cprtright {
+    float: right;
+    /*width: 706px;*/
+    width: 610px;
+    height: 141px;
+}
+
+.cprtright>ul {
+    margin: 0 0 0 -10px;
+    padding: 0 0 5px;
+    list-style: none;
+}
+
+.cprtright>ul>li {
+    color: white;
+    float: left;
+    display: inline-block;
+}
+
+.cprtright>ul>li>a {
+    color: #ccc;
+    padding: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.cprtright>ul>p {
+    float: left;
+    color: #552c09;
+    font-size: 12px;
+    margin: 0;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.cprtright>ul>p>a {
+    marg-top: 10px;
+    display: inline-block;
+}
+
+.cprtright>ul>p>a:nth-of-type(1) {
+    background: url(../img/police.png);
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 25px;
+}
+
+.cprtright>ul>p>a:nth-of-type(2) {
+    width: 24px;
+    height: 25px;
+    background: url(../img/Fzx.png);
+    background-repeat: no-repeat;
+}
+
+.cprtright>ul>p>a:nth-of-type(3) {
+    width: 23px;
+    height: 25px;
+    background: url(../img/hjwsss.png);
+    background-repeat: no-repeat;
+}
+
+.cprtright>ul>p>a:nth-of-type(4) {
+    width: 23px;
+    height: 25px;
+    background: url(../img/Ficon20120516.png);
+    background-repeat: no-repeat;
+}
+
+.weibos {
+    width: 82px;
+    height: 82px;
+    background-color: rgba(96, 52, 18, .6);
+    top: 200px;
+    left: 250px;
+    position: relative;
+    border-radius: 200px;
+    margin-bottom: 10px;
+}
+
+.weibos img:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes move {
+    from {
+        transform: rotateY(0deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes moves {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+.weibos img:nth-of-type(1) {
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: inherit;
+}
+
+.weibos img:nth-of-type(2) {
+    animation-name: moves;
+    animation-duration: 5s;
+    animation-timing-function: inherit;
+    animation-iteration-count: infinite;
+}
+
+.bigweibo {
+    position: fixed;
+    bottom: 200px;
+    left: 1100px;
+}
+
+.weiboimg {
+    width: 82px;
+    height: 82px;
+    background-color: rgba(96, 52, 18, .6);
+    top: 200px;
+    left: 250px;
+    position: relative;
+    border-radius: 200px;
+    margin-bottom: 10px;
+    background: url(../img/Fweibo-icon.png);
+    background-repeat: no-repeat;
+    background-color: rgba(96, 52, 18, .6);
+}
+
+.weiboing {
+    display: block;
+    width: 82px;
+    height: 82px;
+    background-color: rgba(96, 52, 18, .6);
+    top: 200px;
+    left: 250px;
+    position: relative;
+    border-radius: 200px;
+    margin-bottom: 10px;
+    background: url(../img/Fgotop-icon.png);
+    background-repeat: no-repeat;
+    background-color: rgba(96, 52, 18, .6);
+}

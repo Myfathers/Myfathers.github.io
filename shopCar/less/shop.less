@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+
+.box {
+  padding: 10px 5px;
+  border: 1px solid #ccc;
+
+  .checkleft {
+    float: left;
+
+    input {
+      width: 15px;
+      height: 15px;
+      background: white;
+    }
+  }
+}
+
+.header-top {
+  //   font-size: 15px;
+  margin: 0 0 0 18px;
+
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon.png") no-repeat;
+
+    background-position: -20px -105px;
+
+  }
+
+  input {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: transparent;
+
+    // border-radius: none;
+  }
+
+  .dname {
+
+    color: #3c3c3c;
+    padding: 0;
+    bottom: 3px;
+    position: relative;
+
+    //  }
+    strong {
+      padding: 0 5px;
+    }
+  }
+
+  .shop {
+    &:after {
+      content: " ";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url('../img/Q.gif') no-repeat;
+      background-position: -80px 0;
+      vertical-align: bottom;
+
+    }
+  }
+}
+
+.content {
+  margin: 10px 0;
+
+  .details {
+    .portrait {
+      width: 100px;
+      height: 100px;
+      float: left;
+
+      .thumb {
+        width: 80px;
+        height: 80px;
+        border-radius: none;
+        outline: none;
+        margin: 0;
+        padding: 0;
+
+        &:focus {
+          border-color: white;
+          outline: none;
+          box-shadow: none;
+        }
+
+      }
+    }
+  }
+
+  .article {
+    // float: right;
+
+    .title-top {
+      float: left;
+      width: 226px;
+
+    }
+
+    .colorSize {
+      color: #9c9c9c;
+      width: 190px;
+      float: left;
+      padding: 0 20px;
+    }
+
+    .moneys {
+      width: 190px;
+      float: left;
+      color: #3c3c3c;
+      font-weight: 700;
+      padding: 0 20px;
+
+    }
+
+    .quantity {
+      width: 150px;
+      float: left;
+      // color: #3c3c3c;
+      // font-weight: 700;
+      padding: 0 20px;
+
+      button {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        border: transparent;
+
+      }
+
+      input {
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        text-align: center;
+
+      }
+    }
+
+    .moneyChange {
+      width: 100px;
+      float: left;
+      padding: 0 20px;
+    }
+
+    .delete {
+      width: 149px;
+      float: left;
+
+      li {
+        list-style: none;
+
+        &:hover{
+          cursor: pointer;
+        }
+        
+
+      }
+
+    }
+
+  }
+
+}
+
+.boxs {
+  padding: 10px 5px;
+  border: 1px solid transparent;
+  background: #e5e5e5;
+
+  .checkleft {
+    float: left;
+
+    input {
+      width: 15px;
+      height: 15px;
+      background: transparent;
+    }
+  }
+
+  .footder-right {
+    width: 500px;
+    float: left;
+    line-height: 20px;
+
+    ul {
+      float: left;
+      width: 500px;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        padding: 0 10px;
+
+       &:hover{
+         cursor: pointer;
+       }
+
+      }
+
+    }
+
+  }
+}
+
+.data {
+  float: right;
+  width: 500px;
+
+  .dole {
+    color: red;
+    font-size: 20px;
+  }
+
+}

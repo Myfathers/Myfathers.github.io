@@ -1,0 +1,57 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+}
+#app1{
+    padding: 0 15px;
+}
+.picture{
+    .item{
+        .money {
+            color: red;  
+            &::before{
+                content: '￥'
+            }
+        }
+    }
+   
+}
+.picture.pc{
+        .item{
+            width: 50%;
+            float: left;
+            img{
+                width: 100%;
+            }
+            .left{
+                h5{
+                    padding: 20px 0;
+                }
+                .icon{
+                    width: 34px;
+                    height: 14px; 
+                }
+            }
+        }
+    
+}
+.picture.moblie{
+    .item{
+        img{
+            width: 25%;
+            float: left;
+        }
+        .left{
+            width: 75%;
+            padding: 0 30px;
+            h5{
+        padding: 0px 10px;
+
+            }
+            .icon{
+                width: 34px;
+                height: 14px;
+            }
+        }
+    }
+}

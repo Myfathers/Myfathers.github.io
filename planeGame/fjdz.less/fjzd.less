@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+}
+
+.stage-layout() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.button-style() {
+   width: 150px;
+   height: 30x;
+   border-radius: 30px;
+   background: c4c9ca;
+  border:1px solid black;
+display: block;
+margin: auto;
+position: absolute;
+bottom: 50px;
+left: 0;
+right: 0;
+}
+#content{
+    width: 320px;
+    height: 568px;
+    position: relative;
+   
+    margin: auto;
+    #start{
+        // display: none;
+        .stage-layout;
+        background: url(../img/background-start.png) no-repeat;
+     button{
+         .button-style;
+     }
+
+    }
+    #main{
+        display: none;
+        .stage-layout;
+        background: url(../img/background-game.png);
+        background-repeat: no-repeat;
+          #score{
+              position: absolute;
+              top: 10px;
+              left: 10px;
+          }
+          #suspend{
+              display: none;
+          }
+        button{
+            .button-style;
+            bottom: auto;
+            top: 50%;
+            z-index: 99999;
+            outline:none;
+            
+        
+        }
+        button:first-child{
+            margin-top: -40px;
+        }
+        
+    }
+    #settlement{
+        display: none;
+        .stage-layout;
+        z-index: 999;
+        text-align: center;
+        padding-top:50%; 
+        button{
+            .button-style;
+            position: relative;
+            bottom: 0;
+            outline:none;
+
+          
+        
+        }
+    }
+}
+img{
+    position: absolute;
+}

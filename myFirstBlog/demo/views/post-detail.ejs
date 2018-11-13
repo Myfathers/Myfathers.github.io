@@ -1,0 +1,39 @@
+<%- include('./components/header') %> 
+
+    <!-- 页面主体 -->
+
+    <div class="container">
+    <%- include('./components/post-content') %> 
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading"><a href="">留言</a></div>
+                <div class="panel-body">
+                     <% constent2.forEach(element => { %>
+                     <%- include('./components/comments',{comment2:element}) %> 
+                      
+                     <% }) %> 
+                </div>
+                <div class="panel-footer clearfix">
+                <!-- Basic panel example -->
+                <form action="/comments/<%= contents._id %> " method="POST">
+                    <div class="form-group">
+                        <textarea type="text" rows="3" class="form-control" id="content" name="content"
+                            placeholder="comment"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-info form-control">发表留言</button>
+                </form>
+            </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+<%- include('./components/footer') %> 
+
+
+   

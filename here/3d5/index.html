@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+            
+    div{
+    	display: inline-block;
+    	/*position: relative;*/
+    }
+    .box{
+    	position: absolute;
+    	/*left: 300px;*/
+    	width: 230px;
+    	height: 230px;
+    	/*top: 0;*/
+    	border-radius: 50%;
+    	border: 10px solid gray;
+    	transition: all 0.3s ease-in-out;
+    		transition: all .5s;
+    }
+    .box img{
+    	width: 100%;
+    	height: 100%;
+    	border-radius: 50%;
+    	
+    	
+    }
+      
+      a:hover .box{
+         transform: translateX(300px);
+         opacity: 0;
+      }
+    
+      a:hover .zt{
+      	opacity: 1;
+      	transform: translateX(400px);
+      }
+   
+    .zt{
+    	width: 230px;
+    	height: 230px;
+    	background: rgba(0,0,0,0.8);
+    	position: absolute;
+    	top:18px;
+    	left: -300px;
+    	border-radius:50% ;
+    	text-align: center;
+    	opacity: 0;
+    	/*transform: scale(0.5);*/
+    		transition: all .5s;
+    	
+    	
+    
+    	
+    
+    	
+    	
+    }
+    .zt h3{
+    	color: #FFFFFF;
+    	/*background: red;*/
+    	    text-transform: uppercase;
+    	    letter-spacing: 2px;
+    	        padding: 55px 0 0 0;
+    	            margin: 0 30px;
+    	            font-size: 22px;
+    	
+    }
+    .zt p{
+    	color: #bbb;
+    padding: 10px 5px;
+    font-style: italic;
+    margin: 0 10px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);s
+    }
+	</style>
+
+	<body>
+		  <a href="">
+	     	<div class="zt">
+             		<div class="ztz">
+             			<h3>Heading here</h3>
+             			<p>Description goes here</p>
+             		</div>
+	     	</div>
+	     	<div class="box">
+	     		<img src="img/5.jpg"/>
+	     	</div>
+	     
+	     	
+	     </a>
+		<script src="https://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

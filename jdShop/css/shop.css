@@ -1,0 +1,43 @@
+body {
+  width: 500px;
+  margin: 0 auto;
+}
+#app1 {
+  padding: 0 15px;
+}
+.picture .item .money {
+  color: red;
+}
+.picture .item .money::before {
+  content: '￥';
+}
+.picture.pc .item {
+  width: 50%;
+  float: left;
+}
+.picture.pc .item img {
+  width: 100%;
+}
+.picture.pc .item .left h5 {
+  padding: 20px 0;
+}
+.picture.pc .item .left .icon {
+  width: 34px;
+  height: 14px;
+}
+.picture.moblie .item img {
+  width: 25%;
+  float: left;
+}
+.picture.moblie .item .left {
+  width: 75%;
+  padding: 0 30px;
+}
+.picture.moblie .item .left h5 {
+  padding: 0px 10px;
+}
+.picture.moblie .item .left .icon {
+  width: 34px;
+  height: 14px;
+}
+/*# sourceMappingURL=./shop.css.map */

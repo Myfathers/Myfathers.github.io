@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JavaScript/jquery.js"></script>
+
+    <title>Document</title>
+
+
+
+
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="bigbox">
+        <div class="topbox">
+            <img src="img/timg (1).jpg" alt="">
+            <img src="img/timg (2).jpg" alt="">
+            <img src="img/timg (3).jpg" alt="">
+            <img src="img/timg (4).jpg" alt="">
+
+        </div>
+        <ul class="bottombox">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+
+    </div>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+        }
+        
+        .bigbox {
+            width: 800px;
+            height: 400px;
+            /* background: red; */
+            margin: auto;
+        }
+        
+        .bigbox .topbox {
+            width: 100%;
+            height: 300px;
+            /* background: royalblue; */
+            position: relative;
+        }
+        
+        .bigbox .topbox img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* display: none; */
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 1s;
+        }
+        
+        .bigbox .topbox img:first-of-type {
+            /* display: block; */
+            opacity: 1;
+        }
+        
+        .bigbox .topbox img.svg {
+            /* display: block; */
+            opacity: 1;
+            transform: scale(1)
+        }
+        
+        .bigbox .bottombox {
+            text-align: center;
+            list-style: none;
+        }
+        
+        .bigbox .bottombox li {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            transition: all 2s;
+        }
+        
+        .bigbox .bottombox li.css {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+
+
+            var $lis = $(".bigbox .bottombox li");
+
+            $lis.click(function() {
+
+                $(this).addClass("css").siblings().removeClass("css");
+                var index = $(this).index();
+                // $(".bigbox .topbox img").eq(index).show().siblings().hide();
+                $(".bigbox .topbox img").eq(index).addClass("svg").siblings().removeClass("svg");
+
+            })
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+
+
+</body>
+<!--  -->
+
+</html>

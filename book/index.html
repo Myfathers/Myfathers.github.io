@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style type="text/css">
+    body {
+        background: url("img/12472.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .bigbox {
+        perspective: 500px;
+        margin: 100px auto;
+        width: 345px;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+    
+    .boximg {
+        height: 345px;
+        width: 345px;
+        position: relative;
+        transition: all .5s ease-in-out 0s;
+    }
+    
+    .boximg img {
+        height: 345px;
+        width: 345px;
+    }
+    
+    .boxtext {
+        top: 0;
+        left: 0;
+        width: 345px;
+        height: 345px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        transform: rotateY(90deg);
+        transition: all .5s ease-in-out 0s;
+        text-align: center
+    }
+    
+    .boxtext p {
+        color: white;
+    }
+    
+    .bigbox:hover .boximg {
+        transform: rotateY(-90deg);
+    }
+    
+    .bigbox:hover .boxtext {
+        transform: rotateY(0);
+    }
+</style>
+
+<body>
+    <div class="bigbox">
+        <div class="boximg">
+            <img src="img/1.jpg" />
+        </div>
+        <div class="boxtext">
+            <p>我需要三件东西：爱情友谊和图书。然而这三者之间何其相通！炽热的爱情可以充实图书的内容，图书又是人们最忠实的朋友</p>
+            <p>蒙田</p>
+        </div>
+    </div>
+</body>
+
+</html>

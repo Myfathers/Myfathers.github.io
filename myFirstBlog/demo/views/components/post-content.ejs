@@ -1,0 +1,40 @@
+<div class="row">
+<div class="col-sm-2 hidden-xs profile">
+     
+<a href="/posts?author=<%= contents.author._id %>" class="pull-right" data-toggle="popover" title="<%= contents.author.username %> " data-content="<%= contents.author.profile %>" data-placement="bottom">
+        <img src="/uploads/<%= contents.author.avatar %>" alt=" ... " class="  img-responsive img-circle ">
+</div>
+<div class="col-xs-12 col-sm-8">
+    <div class="panel panel-default">
+        <div class="panel-heading"><a href="/posts/<%= contents._id %>"><%= contents.title %></a></div>
+        <div class="panel-body text-justify">
+        <%= contents.content %>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="pull-left">
+                <span><%= contents.createdTime.toLocaleString() %> </span>
+            </div>
+            <div class="pull-right">
+   
+                <span class="dropdown-toggle" data-toggle="dropdown">浏览(<%= contents.pv %>)</span>
+                <span class="dropdown-toggle" data-toggle="dropdown">留言(<%= contents.comments %>)</span>
+              
+                <% if (user._id) { %>
+                <% if (user._id==contents.author._id) { %>
+                <span class="glyphicon glyphicon-triangle-bottom dropdown-toggle" data-toggle="dropdown"></span>
+                <ul class="dropdown-menu dropdown-menu-top" aria-labelledby="dLabel">
+                <li><a href="/posts/<%= contents._id %>/edit">编辑</a></li>
+                <li><a href="/posts/<%= contents._id %>/remove">删除</a></li>
+            </ul>
+                <% } %>
+                <% } %>
+               
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</div>

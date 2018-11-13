@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="JavaScript/jquery.js"></script>
+
+</head>
+<style>
+    body {
+        margin-top: 40px;
+    }
+    
+    .bigbox {
+        width: 400px;
+        height: 200px;
+        background: red;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .topbox {
+        width: 1600px;
+    }
+    
+    .topbox img {
+        width: 400px;
+        height: 200px;
+        float: left;
+        /* opacity: 0.8; */
+    }
+    
+    .bottombox {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 36px;
+        margin: auto;
+    }
+    
+    .bottombox .prev {
+        float: left;
+        background: rgba(0, 0, 0, 0.8);
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        text-align: center;
+    }
+    
+    .bottombox .next {
+        float: right;
+        background: rgba(0, 0, 0, 0.8);
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        text-align: center;
+    }
+    
+    .bigbox .upbox {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .bigbox .upbox i {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        margin: 5px;
+        border-radius: 50px;
+    }
+    
+    .bigbox .upbox i.css {
+        background: rgba(0, 0, 0, 0.5);
+        width: 30px;
+        height: 15px;
+    }
+</style>
+
+<body>
+    <div class="bigbox">
+        <div class="topbox">
+            <img src="img/timg (1).jpg" alt="">
+            <img src="img/timg (2).jpg" alt="">
+            <img src="img/timg (3).jpg" alt="">
+            <img src="img/timg (4).jpg" alt="">
+
+        </div>
+        <div class="bottombox">
+            <span class="prev"><</span>
+            <span class="next">></span>
+
+        </div>
+        <div class="upbox"></div>
+
+
+    </div>(
+    <script>
+        $('.bottombox .prev').hover(function() {
+            $('.bottombox .next').toggle()
+        })
+        $('.bottombox .next').hover(function() {
+                $('.bottombox .prev').toggle()
+            })
+            //先创建小圆点
+        $(".bigbox .topbox img").each(function() {
+                $(".bigbox .upbox").append("<i></i>");
+
+
+            })
+            //给第一个小圆点上色
+        $(".bigbox .upbox i:first").addClass("css");
+        //把所有照片用一个变量存放起来
+        var old = $(".bigbox .topbox img");
+        //小圆点点击事件
+        $(".bigbox .upbox i").click(function() {
+            //当点击时当前的小圆点上色并把同胞的颜色去掉
+            $(this).addClass("css").siblings().removeClass("css");
+            //点击小圆点变化图片的时候判断图片是否大于点击前的那一张
+            console.log($(this).index())
+            if ($(this).index() > old.index($(".bigbox .topbox img:eq(0)"))) {
+                old.eq($(this).index()).insertAfter(".bigbox .topbox img:eq(0)");
+                $(".bigbox .topbox").animate({
+                        'margin-left': '-400px'
+                    }, 1000, function() {
+                        $(".bigbox .topbox").css('margin-left', '0').find("img").eq(0).appendTo(".bigbox .topbox");
+
+                    })
+                    //点击小圆点变化图片的时候判断图片是否小于点击前的那一张
+
+            } else if ($(this).index() < old.index($(".bigbox .topbox img:eq(0)"))) {
+                old.eq($(this).index()).insertBefore(".bigbox .topbox img:eq(0)");
+                $(".bigbox .topbox").css({
+                    'margin-left': '-400px'
+                }).animate({
+                    'margin-left': '0'
+                }, 1000)
+            }
+
+        });
+
+
+        $(".bigbox .bottombox .next").click(function() {
+            var Index = old.index($(".bigbox .topbox img:eq(0)"));
+            Index++;
+            console.log(Index)
+            if (Index >= old.length) {
+                console.log(111111)
+                Index = 0;
+            }
+
+            $(".bigbox .upbox i").eq(Index).addClass("css").siblings().removeClass("css");
+            old.eq(Index).insertAfter(".bigbox .topbox img:eq(0)");
+            $(".bigbox .topbox").animate({
+                'margin-left': '-400px'
+            }, 1000, function() {
+                $(".bigbox .topbox").css('margin-left', '0').find("img").eq(0).appendTo(".bigbox .topbox");
+
+
+
+            })
+
+
+
+        });
+        $(".bigbox .bottombox .prev").click(function() {
+            var Indexs = old.index($(".bigbox .topbox img:eq(0)")) - 1;
+
+            if (Indexs < 0) {
+                Indexs = old.length - 1;
+            }
+            $(".bigbox .upbox i").eq(Indexs).addClass("css").siblings().removeClass("css");
+            old.eq(Indexs).insertBefore(".bigbox .topbox img:eq(0)");
+            $(".bigbox .topbox").css({
+                'margin-left': '-400px'
+            }).animate({
+                'margin-left': '0'
+            }, 1000)
+        });
+    </script>
+
+</body>
+
+</html>

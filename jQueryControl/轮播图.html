@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="JavaScript/jquery.js"></script>
+
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .bigbox {
+        width: 800px;
+        height: 400px;
+        background: red;
+        margin: auto;
+        position: relative;
+    }
+    
+    .bigbox .topbox {
+        width: 100%;
+        height: 100%;
+        background: royalblue;
+        position: relative;
+    }
+    
+    .bigbox .topbox img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* display: none; */
+        opacity: 0;
+        transition: all .5s;
+    }
+    
+    .bigbox .topbox img:first-of-type {
+        opacity: 1;
+    }
+    
+    .bigbox .topbox img.svg {
+        opacity: 1;
+    }
+    
+    .bigbox .bottombox {
+        background: yellowgreen;
+    }
+    
+    .bigbox .bottombox .prev,
+    .bigbox .bottombox .next {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 200px;
+        border: 4px double rgba(0, 0, 0, 0.8);
+        -webkit-box-reflect: below 0 -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+    }
+    
+    .bigbox .bottombox .prev {
+        left: 10px;
+    }
+    
+    .bigbox .bottombox .next {
+        right: 10px;
+    }
+</style>
+
+<body>
+    <div class="bigbox">
+        <div class="topbox">
+            <img src="img/timg (1).jpg" alt="">
+            <img src="img/timg (2).jpg" alt="">
+            <img src="img/timg (3).jpg" alt="">
+            <img src="img/timg (4).jpg" alt="">
+
+        </div>
+        <div class="bottombox">
+            <div class="prev">上</div>
+            <div class="next">下</div>
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+        $(".bigbox .bottombox .next").hover(function() {
+            $(".bigbox .bottombox .prev").toggle()
+        })
+        $(".bigbox .bottombox .prev").hover(function() {
+            $(".bigbox .bottombox .next").toggle()
+        })
+        var index = 0;
+        $(".bigbox .bottombox .next").click(function() {
+            index++;
+            if (index > 3) {
+                index = 0;
+            }
+            $(".bigbox .topbox img").eq(index).addClass("svg").siblings().removeClass("svg");
+        })
+        $(".bigbox .bottombox .prev").click(function() {
+            index--;
+            if (index < 0) {
+                index = 3;
+            }
+            console.log(index)
+            $(".bigbox .topbox img").eq(index).addClass("svg").siblings().removeClass("svg");
+
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="600" height="300" style="border:3px solid yellow" class="canvas1"></canvas>
+
+
+    <script>
+        var canvas1 = document.querySelector(".canvas1");
+        var ctx = canvas1.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 200, 300);
+        ctx.fillStyle = "red";
+        ctx.fillRect(400, 0, 200, 300);
+    </script>
+    <canvas width="600" height="300" style="border:3px solid darksalmon" class="canvas2"></canvas>
+
+
+    <script>
+        var canvas2 = document.querySelector(".canvas2");
+        var cn = canvas2.getContext("2d");
+        cn.beginPath();
+        cn.fillStyle = "red";
+        cn.arc(300, 150, 100, 0, Math.PI * 2, false);
+        cn.stroke();
+        cn.fill();
+    </script>
+
+    <canvas width="400" height="600" style="border:3px solid red" class="canvas3"></canvas>
+    <script>
+        var canvas3 = document.querySelector(".canvas3");
+        var android = canvas3.getContext("2d");
+        var circle = function(x, y, radius, start, end, counter) {
+            android.beginPath();
+            android.arc(x, y, radius, start, end, counter);
+            android.fill();
+        }
+        android.fillStyle = "#ABCD05";
+        circle(200, 200, 100, 0, Math.PI, true);
+        android.fillStyle = "white";
+        circle(150, 150, 15, 0, Math.PI * 2, false);
+        circle(250, 150, 15, 0, Math.PI * 2, false);
+        android.fillStyle = "#ABCD05";
+        circle(110, 401.02, 11, 0, Math.PI * 2, false);
+        circle(291, 401.02, 11, 0, Math.PI * 2, false);
+        circle(60, 412, 10, 0, Math.PI * 2, false);
+        circle(60, 212, 10, 0, Math.PI * 2, false);
+        circle(340, 410, 10, 0, Math.PI * 2, false);
+        circle(340, 210, 10, 0, Math.PI * 2, false);
+        circle(155, 510, 25, 0, Math.PI * 2, false);
+        circle(245, 510, 25, 0, Math.PI * 2, false);
+        var line = function(x1, y1, w, y) {
+            android.fillStyle = "#ABCD05";
+            android.fillRect(x1, y1, w, y);
+        }
+        line(100, 210, 200, 200);
+        line(50, 210, 20, 200);
+        line(330, 210, 20, 200);
+        line(130, 410, 50, 100);
+        line(220, 410, 50, 100);
+        var stroke = function(width, x1, y1, x2, y2) {
+            android.lineWidth = width;
+            android.beginPath();
+            android.moveTo(x1, y1);
+            android.lineTo(x2, y2);
+            android.stroke();
+        }
+        android.strokeStyle = "#ABCD05";
+        stroke(5, 120, 50, 150, 110);
+        stroke(5, 300, 50, 250, 110);
+    </script>
+
+    <!-- <canvas width="1000" height="600" style="border:3px solid red;background: red" class="canvas4 "></canvas>
+
+    <script>
+        var canvas4 = document.querySelector(".canvas4");
+        var stars = canvas4.getContext('2d');
+        var star = function(width, x1, y1, x2, y2) {
+            stars.lineWidth = width;
+            stars.beginPath();
+            stars.moveTo(x1, y1);
+            stars.lineTo(x2, y2);
+            stars.stroke();
+        }
+        stars.strokeStyle = "white";
+        star(2, 55, 100, 100, 100);
+        star(2, 110, 50, 100, 100);
+        star(2, 110, 50, 130, 100);
+        star(2, 130, 100, 180, 100);
+        star(2, 180, 100, 140, 130);
+        star(2, 140, 130, 150, 160);
+        star(2, 150, 160, 120, 140);
+    </script> -->
+</body>
+
+
+
+</h

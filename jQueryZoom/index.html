@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<style>
+    #box {
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        border: 1px solid gray;
+    }
+    
+    #box img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #box #small-box {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: gray;
+        left: 0;
+        top: 0;
+        opacity: 0.8;
+        display: none;
+    }
+    
+    #bigbox {
+        height: 600px;
+        width: 600px;
+        position: absolute;
+        top: 0;
+        left: 510px;
+        overflow: hidden;
+        display: none;
+        border: 1px solid gray;
+        margin: 20px;
+    }
+    
+    #bigbox img {
+        position: absolute;
+        height: 1200px;
+        width: 1200px;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <img src="img/timg1.jpg" alt="">
+        <div id="small-box">
+
+        </div>
+    </div>
+    <div id="bigbox">
+        <img src="img/timg1.jpg" alt="" id="sliderImg">
+    </div>
+
+
+
+    <script>
+        var box = document.getElementById("box");
+        smallbox = document.getElementById("small-box");
+        bigbox = document.getElementById("bigbox");
+
+        var sliderImg = document.getElementById("sliderImg");
+        // var bigboxImg = document.getElementById("bigboxImg");
+
+        var x = 0;
+        var y = 0;
+        box.onmouseover = function() {
+
+
+            smallbox.style.display = "block";
+            bigbox.style.display = "block";
+
+
+        }
+        box.onmouseout = function() {
+
+            smallbox.style.display = "none";
+            bigbox.style.display = "none";
+
+        }
+        box.onmousemove = function(ev) {
+            x = ev.clientX - box.offsetLeft - (smallbox.offsetWidth / 2);
+            y = ev.clientY - box.offsetTop - (smallbox.offsetHeight / 2);
+            if (x < 0) {
+                x = 0;
+            }
+            if (x > box.offsetWidth - smallbox.offsetWidth) {
+                x = box.offsetWidth - smallbox.offsetWidth;
+            }
+            if (y < 0) {
+                y = 0;
+            }
+            if (y > box.offsetHeight - smallbox.offsetHeight) {
+                y = box.offsetHeight - smallbox.offsetHeight;
+            }
+            smallbox.style.left = x + "px";
+            smallbox.style.top = y + "px";
+
+            sliderImg.style.left = -x * 3 + "px";
+            sliderImg.style.top = -y * 3 + "px";
+        }
+    </script>
+</body>
+
+</html>

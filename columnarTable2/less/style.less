@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  background: linear-gradient(120deg, rgba(50, 150, 100, 0.4), rgba(0, 0, 100, 0));
+  perspective: 1500px;
+  overflow: hidden;
+
+  .bg {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+
+
+input {
+  display: none;
+
+  +.card {
+    width: 400px;
+    height: 550px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform-style: preserve-3d;
+    transition: all .6s;
+    text-align: center;
+    transform-origin: 50% 50% 200px;
+    border-radius: 20px;
+
+    h2 {
+      margin:  20px 0 0 ;
+      font-size: 40px;
+      // line-height: 40px;
+      // transform: translateY(0px);
+      // transition: .5s ease-in-out;
+      color: white;
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 300;
+      padding: 0;
+    }
+
+    p {
+    
+      font-size: 20px;
+    
+      margin: 0;
+      font-weight: 300;
+      padding: 0;
+    }
+
+    h3 {
+      color: white;
+      
+      transition: transform .5s ease-in-out;
+      font-size: 40px;
+  
+      font-weight: 300;
+    }
+
+    &::after {
+      .layer;
+      background: rgba(117, 117, 117, 0.6);
+      transition: inherit;
+      z-index: -2;
+      border-radius: inherit;
+    }
+
+    .layer {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+    }
+
+    .photo {
+      .layer;
+      background: url("../img/600X600.jpg") no-repeat bottom center;
+      background-size: cover;
+      border-radius: inherit;
+      z-index: -1;
+
+      &::before {
+        .layer;
+        background: rgba(255, 255, 0, 0);
+        transition: inherit;
+        border-radius: inherit;
+
+      }
+    }
+
+    .chart {
+      font-size: 0;
+
+      .bar {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        transform: rotate(-45deg);
+        transform-style: preserve-3d;
+        display: inline-block;
+        font-size: 0;
+        margin: 20px;
+        position: relative;
+        text-align: center;
+        line-height: 30px;
+        transition: all .3s;
+
+        &::before {
+          .layer;
+          content: "";
+          height: 0;
+          background: linear-gradient(to bottom, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+          transform-origin: 50% 0 0;
+          transform: translateY(30px) rotateX(90deg);
+          transition: all .3s;
+        }
+
+        &::after {
+          .layer;
+          content: "M";
+          background: white;
+          transform: translateZ(0px);
+          transition: all .3s;
+        }
+
+        span {
+          width: 0;
+          display: block;
+          background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+          transform-origin: 0 50% 0;
+          transform: rotateY(-90deg);
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: all .3s;
+        }
+      }
+
+      .bar1 {
+        transition: all .003s * @span1;
+      }
+
+      .bar2 {
+        transition: all .003s * @span2;
+      }
+
+      .bar3 {
+        transition: all .003s * @span3;
+      }
+
+      .bar4 {
+        transition: all .003s * @span4;
+      }
+
+      .bar5 {
+        transition: all .003s * @span5;
+      }
+
+      .bar6 {
+        transition: all .003s * @span6;
+      }
+
+      .bar7 {
+        transition: all .003s * @span7;
+      }
+    }
+  }
+}
+@span1: 200;
+@span2: 100;
+@span3: 150;
+@span4: 240;
+@span5: 200;
+@span6: 200;
+@span7: 100;
+
+input:checked {
+  +.card {
+    h2{
+      top: -30px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    p {
+     top: -30px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    h3 {
+      transform: translateY(30px);
+    }
+    transform: rotateX(60deg) rotateY(0deg) translateZ(145px);
+
+    &::after {
+      transform: translateZ(-20px);
+
+    }
+
+    .photo {
+      &::before {
+        background: rgba(0, 50, 100, 0.8);
+      }
+    }
+
+    .bar {
+      font-size: 12px;
+    }
+
+    .chart {
+      .bar1 {
+        &::before {
+          height: @span1 * 1px;
+        }
+
+        &::after {
+          transform: translateZ(@span1 * 1px);
+        }
+
+        span {
+          width: @span1 * 1px;
+        }
+      }
+
+      .bar2 {
+        &::before {
+          height: @span2 * 1px;
+        }
+
+        &::after {
+          transform: translateZ(@span2 * 1px);
+        }
+
+        span {
+          width: @span2 * 1px;
+        }
+      }
+
+      .bar3 {
+        &::before {
+          height: @span3 * 1px;
+        }
+
+        &::after {
+          transform: translateZ(@span3 * 1px);
+        }
+
+        span {
+          width: @span3 * 1px;
+        }
+      }
+
+      .bar4 {
+        &::before {
+          height: @span4 * 1px;
+        }
+
+        &::after {
+          transform: translateZ(@span4 * 1px);
+        }
+
+        span {
+          width: @span4 * 1px;
+        }
+      }
+
+      .bar5 {
+        &::before {
+          height: @span5 * 1px;
+        }
+
+        &::after {
+          transform: translateZ(@span5 * 1px);
+        }
+
+        span {
+          width: @span5 * 1px;
+        }
+      }
+
+      .bar6 {
+        &::before {
+          height: @span6 * 1px;
+        }
+
+        &::after {
+          transform: translateZ(@span6 * 1px);
+        }
+
+        span {
+          width: @span6 * 1px;
+        }
+      }
+
+      .bar7 {
+        &::before {
+          height: @span7 * 1px;
+        }
+
+        &::after {
+          transform: translateZ(@span7 * 1px);
+        }
+
+        span {
+          width: @span7 * 1px;
+        }
+      }
+    }
+  }
+}
