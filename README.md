@@ -84,7 +84,12 @@ http://Myfathers.github.io/here/planeGame/index.html
 http://Myfathers.github.io/here/rubik/index.html
 
 
+[shopCar]
+http://Myfathers.github.io/here/shopCar/index.html
 
+
+[toast]
+http://Myfathers.github.io/here/toast/index.html
 
 
 
