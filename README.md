@@ -61,35 +61,35 @@ http://Myfathers.github.io/here/3d9/index.html
 
 [jdShop]
 
-http://Myfathers.github.io/here/jdShop/index.html
+http://Myfathers.github.io/jdShop/index.html
 
 [jQueryControl]
 
-http://Myfathers.github.io/here/jQueryControl/index.html
+http://Myfathers.github.io/jQueryControl/index.html
 
 [land]
 
-http://Myfathers.github.io/here/land/index.html
+http://Myfathers.github.io/land/index.html
 
 
 [land1]
 
-http://Myfathers.github.io/here/land1/index.html
+http://Myfathers.github.io/land1/index.html
 
 [planeGame]
-http://Myfathers.github.io/here/planeGame/index.html
+http://Myfathers.github.io/planeGame/index.html
 
 [rubik]
 
-http://Myfathers.github.io/here/rubik/index.html
+http://Myfathers.github.io/rubik/index.html
 
 
 [shopCar]
-http://Myfathers.github.io/here/shopCar/index.html
+http://Myfathers.github.io/shopCar/index.html
 
 
 [toast]
-http://Myfathers.github.io/here/toast/index.html
+http://Myfathers.github.io/toast/index.html
 
 
 
